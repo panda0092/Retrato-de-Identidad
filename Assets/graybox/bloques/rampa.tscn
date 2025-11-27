@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c427gg7w14h40"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_2ppri"]
+left_to_right = 1.0
+size = Vector3(5, 3, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u2bx2"]
+size = Vector3(5.73594, 0.0100098, 2.95496)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6t5v7"]
+size = Vector3(1, 2.29846, 3.02332)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Rampa" type="StaticBody3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 19.321, 3.0258, -0.0630417)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Rampa"]
+mesh = SubResource("PrismMesh_2ppri")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rampa"]
+transform = Transform3D(0.861629, -0.507538, 0, 0.507538, 0.861629, 0, 0, 0, 1, 0.00168324, -0.0110825, 0.00335693)
+shape = SubResource("BoxShape3D_u2bx2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Rampa"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02681, -0.426453, -0.0137329)
+shape = SubResource("BoxShape3D_6t5v7")

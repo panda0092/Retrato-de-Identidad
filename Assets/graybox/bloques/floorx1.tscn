@@ -1,10 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bsvojg2jrni3n"]
+[gd_scene load_steps=5 format=3 uid="uid://b351sbu4uo3tq"]
 
-[ext_resource type="Texture2D" uid="uid://c528otfuo70r5" path="res://Assets/graybox/Kenney textures/kenney_prototype-textures/Vector/texture_09.svg" id="1_oa7qt"]
+[ext_resource type="Texture2D" uid="uid://c528otfuo70r5" path="res://Assets/graybox/Kenney textures/kenney_prototype-textures/Vector/texture_09.svg" id="1_anoqi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hucgb"]
 albedo_color = Color(0.5960103, 0.7710235, 1, 1)
-albedo_texture = ExtResource("1_oa7qt")
+albedo_texture = ExtResource("1_anoqi")
 uv1_scale = Vector3(16, 16, 16)
 
 [sub_resource type="BoxMesh" id="BoxMesh_oj0ru"]
@@ -14,7 +14,7 @@ uv1_scale = Vector3(16, 16, 16)
 [node name="Node3D" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(120, 0, 0, 0, 1, 0, 0, 0, 80, 0, 0, 0)
+transform = Transform3D(20, 0, 0, 0, 0.5, 0, 0, 0, 20, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_hucgb")
 mesh = SubResource("BoxMesh_oj0ru")
 
