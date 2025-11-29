@@ -1,11 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://c427gg7w14h40"]
+[gd_scene load_steps=6 format=3 uid="uid://c427gg7w14h40"]
+
+[ext_resource type="Texture2D" uid="uid://d052ekuv7xg32" path="res://Assets/graybox/Kenney textures/kenney_prototype-textures/PNG/Light/texture_06.png" id="1_a0tfv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7c5d7"]
+albedo_color = Color(0.32663354, 0.2545235, 0.9999911, 1)
+albedo_texture = ExtResource("1_a0tfv")
 
 [sub_resource type="PrismMesh" id="PrismMesh_2ppri"]
 left_to_right = 1.0
 size = Vector3(5, 3, 3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u2bx2"]
-size = Vector3(5.73594, 0.0100098, 2.95496)
+size = Vector3(5.766896, 0.0100098, 2.95496)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6t5v7"]
 size = Vector3(1, 2.29846, 3.02332)
@@ -16,11 +22,13 @@ size = Vector3(1, 2.29846, 3.02332)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 19.321, 3.0258, -0.0630417)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Rampa"]
+material_override = SubResource("StandardMaterial3D_7c5d7")
 mesh = SubResource("PrismMesh_2ppri")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Rampa"]
-transform = Transform3D(0.861629, -0.507538, 0, 0.507538, 0.861629, 0, 0, 0, 1, 0.00168324, -0.0110825, 0.00335693)
+transform = Transform3D(0.85716707, -0.5150379, 0, 0.5150379, 0.85716707, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_u2bx2")
+debug_color = Color(0, 1, 0, 1)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Rampa"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02681, -0.426453, -0.0137329)

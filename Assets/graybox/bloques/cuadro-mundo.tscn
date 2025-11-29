@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dddckg0k0qfb5"]
+
+[ext_resource type="Texture2D" uid="uid://b7gwr65pqbh8y" path="res://Assets/graybox/Kenney textures/kenney_prototype-textures/PNG/Light/texture_01.png" id="1_lamql"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6ubnu"]
+albedo_color = Color(0.5456855, 0.001075626, 0.686932, 1)
+albedo_texture = ExtResource("1_lamql")
+
+[sub_resource type="BoxMesh" id="BoxMesh_c3xqa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u4b7h"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.05, 0, 0, 0, 15, 0, 0, 0, 10, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_6ubnu")
+mesh = SubResource("BoxMesh_c3xqa")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(0.05, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_u4b7h")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxcp82t0uabbj"]
+
+[ext_resource type="Texture2D" uid="uid://c4jor7v1p681e" path="res://Assets/graybox/Kenney textures/kenney_prototype-textures/Vector/texture_10.svg" id="1_c8ey7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_olq26"]
+albedo_texture = ExtResource("1_c8ey7")
+uv1_scale = Vector3(4, 4, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_13hf4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_maexh"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 4, 0, 0, 0, 12, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_olq26")
+mesh = SubResource("BoxMesh_13hf4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_maexh")

@@ -9,7 +9,7 @@ uv1_scale = Vector3(16, 16, 16)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_tiuy6"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_nn4ud"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_tiuy6"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -21,4 +21,4 @@ mesh = SubResource("CylinderMesh_tiuy6")
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
-shape = SubResource("BoxShape3D_nn4ud")
+shape = SubResource("CylinderShape3D_tiuy6")
